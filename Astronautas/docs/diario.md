@@ -16,8 +16,8 @@ com a IA. Cole só os pedidos que você enviou.
 
 ## Parte 1: uso de IA para entender algo
 
-- O que perguntei (ou "não usei"):
-- O que aprendi:
+- O que perguntei (ou "não usei"): Tive dúvidas sobre como fazer o commit e enviar as alterações do projeto para o GitHub.
+- O que aprendi: Aprendi a usar commit e push para enviar as alterações do VS Code para o GitHub.
 
 ## Primeiro contato: revisão sem editar
 
