@@ -12,7 +12,7 @@ com a IA. Cole só os pedidos que você enviou.
 
 - O que cada classe guarda: ![Desenho das classes](desenhos-das-classes-parte1.jpeg)
 - O que acontece em `LANCAR_VOO`, em palavras: A Agencia procura o voo 10 e verifica se está planejado e se tem astronautas. Depois, verifica todos os astronautas: primeiro vivo, depois disponível. Se algum estiver morto ou indisponível, dá erro e para, sem embarcar ninguém. Morto vem primeiro porque um morto também está indisponível. Só depois de todos passarem na verificação, a Agencia manda todos embarcarem e muda o voo para em curso.
-- Uma dúvida que eu tinha antes de começar:
+- Uma dúvida que eu tinha antes de começar: Fiquei bastante tempo para escrever os laços, tenho muita dificuldade nisso.
 
 ## Parte 1: uso de IA para entender algo
 
