@@ -5,8 +5,8 @@ com a IA. Cole só os pedidos que você enviou.
 
 ## Ambiente
 
-- Versão do OpenCode (`opencode --version`):
-- Modelo usado: 1.18.31
+- Versão do OpenCode (`opencode --version`): 1.18.31
+- Modelo usado: Big Pickle (Free).
 
 ## Parte 1: antes de programar
 
