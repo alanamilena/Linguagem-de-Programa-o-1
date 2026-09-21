@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -20,6 +21,15 @@ public:
     idade = idaderecebida;        
     vivo = true;       
     disponivel = true;  
+    }
+
+    Astronauta(string cpfrecebido, string nomerecebido, int idaderecebida,
+               bool vivorecebido, bool disponivelrecebido) {
+    cpf = cpfrecebido;
+    nome = nomerecebido;
+    idade = idaderecebida;
+    vivo = vivorecebido;
+    disponivel = disponivelrecebido;
     }
     
     
@@ -69,6 +79,11 @@ public:
     Voo(int codigorecebido) {
         codigo = codigorecebido;
         estado = "planejado";
+    }
+
+    Voo(int codigorecebido, string estadorecebido) {
+        codigo = codigorecebido;
+        estado = estadorecebido;
     }
     
     
@@ -663,6 +678,104 @@ void listarVoos() {
         cout << "(nenhum voo)" << endl;
     }
 }
+
+    void salvarDados(string nomeArquivo) {
+    ofstream saida(nomeArquivo);
+
+    if (!saida) {
+        cout << "ERRO: nao foi possivel salvar em "
+             << nomeArquivo << endl;
+        return;
+    }
+
+    saida << "astronautas" << endl;
+    saida << astronautas.size() << endl;
+
+    for (int i = 0; i < astronautas.size(); i++) {
+        saida << astronautas[i].getcpf() << endl;
+        saida << astronautas[i].getnome() << endl;
+        saida << astronautas[i].getidade() << endl;
+        saida << astronautas[i].getvivo() << endl;
+        saida << astronautas[i].getdisponivel() << endl;
+    }
+
+    saida << "voos" << endl;
+    saida << voos.size() << endl;
+
+    for (int i = 0; i < voos.size(); i++) {
+        saida << voos[i].getcodigo() << endl;
+        saida << voos[i].getestado() << endl;
+        saida << voos[i].getQuantidadeAstronautas() << endl;
+
+        for (int j = 0; j < voos[i].getQuantidadeAstronautas(); j++) {
+            saida << voos[i].getCpf(j) << endl;
+        }
+    }
+
+    saida.close();
+
+    cout << "OK: dados salvos em " << nomeArquivo << endl;
+}
+
+    void carregarDados(string nomeArquivo) {
+    ifstream entrada(nomeArquivo);
+
+    if (!entrada) {
+        cout << "ERRO: nao foi possivel carregar de "
+             << nomeArquivo << endl;
+        return;
+    }
+
+    vector<Astronauta> astronautasTemporarios;
+    vector<Voo> voosTemporarios;
+
+    string marcador;
+    int quantidade;
+    entrada >> marcador;
+    entrada >> quantidade;
+
+    for (int i = 0; i < quantidade; i++) {
+        string cpf, nome;
+        int idade, vivo, disponivel;
+
+        entrada >> cpf;
+        getline(entrada >> ws, nome);
+        entrada >> idade >> vivo >> disponivel;
+
+        Astronauta astronautaCarregado(cpf, nome, idade,
+                                       vivo == 1, disponivel == 1);
+
+        astronautasTemporarios.push_back(astronautaCarregado);
+    }
+
+    entrada >> marcador;
+    entrada >> quantidade;
+
+    for (int i = 0; i < quantidade; i++) {
+        int codigo, quantCpf;
+        string estado, cpf;
+
+        entrada >> codigo;
+        getline(entrada >> ws, estado);
+        entrada >> quantCpf;
+
+        Voo vooCarregado(codigo, estado);
+
+        for (int j = 0; j < quantCpf; j++) {
+            entrada >> cpf;
+            vooCarregado.adicionarAstronauta(cpf);
+        }
+
+        voosTemporarios.push_back(vooCarregado);
+    }
+
+    entrada.close();
+
+    astronautas = astronautasTemporarios;
+    voos = voosTemporarios;
+
+    cout << "OK: dados carregados de " << nomeArquivo << endl;
+}
 };
     
 
@@ -718,6 +831,14 @@ int main() {
     string cpf;
     cin >> cpf;
     agencia.historico(cpf);
+        } else if (comando == "SALVAR") {
+    string nomeArquivo;
+    cin >> nomeArquivo;
+    agencia.salvarDados(nomeArquivo);
+        } else if (comando == "CARREGAR") {
+    string nomeArquivo;
+    cin >> nomeArquivo;
+    agencia.carregarDados(nomeArquivo);
         } else {
             cout << "ERRO: comando desconhecido " << comando << endl;
         }
