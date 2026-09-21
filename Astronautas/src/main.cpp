@@ -23,23 +23,23 @@ public:
     }
     
     
-    string getcpf() {
+    string getcpf() const {
         return cpf;
     }
     
-    string getnome() {
+    string getnome() const {
         return nome;
     }
     
-   int getidade() {
+   int getidade() const {
         return idade;
     }
     
-    bool getvivo() {
+    bool getvivo() const {
         return vivo;
     }
         
-    bool getdisponivel() {
+    bool getdisponivel() const {
         return disponivel;
     }
      
@@ -72,23 +72,23 @@ public:
     }
     
     
-    int getcodigo() {
+    int getcodigo() const {
     return codigo;
 }
     
-    string getestado() {
+    string getestado() const {
         return estado;
     }
     
-    int getQuantidadeAstronautas() {
+    int getQuantidadeAstronautas() const {
     return cpfs.size();
 }
 
-    string getCpf(int posicao) {
+    string getCpf(int posicao) const {
     return cpfs[posicao];
 }
     
-    bool temAstronauta(string cpf) {
+    bool temAstronauta(string cpf) const {
     for (int i = 0; i < cpfs.size(); i++) {
         if (cpfs[i] == cpf) {
             return true;
