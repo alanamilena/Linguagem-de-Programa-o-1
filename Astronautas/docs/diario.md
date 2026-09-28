@@ -44,10 +44,10 @@ com a IA. Cole só os pedidos que você enviou.
 
 ## Missão 3: RELATORIO
 
-- Primeira mensagem:
-- O plano, resumido:
-- Resultado de `testar.sh missao3` e de `testar.sh parte1`:
-- Precisei refazer? O que mudou no pedido:
+- Primeira mensagem: pedi ao OpenCode para implementar o comando RELATORIO, que mostra as informações dos voos e dos astronautas, além do astronauta mais experiente e da taxa de sucesso. Também pedi que primeiro apresentasse o plano sem editar os arquivos.
+- O plano, resumido: a IA propôs criar o método contarVoosLancados() para calcular a experiência de cada astronauta a partir dos voos, criar o método relatorio() na classe Agencia para fazer as contagens e gerar o relatório, e adicionar o comando RELATORIO no main(). Não seria necessário alterar as classes Astronauta e Voo nem os comandos das missões anteriores.
+- Resultado de `testar.sh missao3` e de `testar.sh parte1`: 5 de 5 testes passaram na Missão 3 e 6 de 6 testes passaram na Parte 1. A Missão 1 também passou com 2 de 2 testes e a Missão 2 com 3 de 3 testes.
+- Precisei refazer? O que mudou no pedido: Não precisei refazer. A primeira implementação passou em todos os testes e não foi necessário mudar o pedido.
 
 ## Missão 4: livre
 
