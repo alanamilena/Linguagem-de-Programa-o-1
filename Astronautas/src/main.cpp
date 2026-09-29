@@ -872,6 +872,38 @@ void listarVoos() {
 
     cout << "OK: dados carregados de " << nomeArquivo << endl;
 }
+
+    void demo() {
+    astronautas.clear();
+    voos.clear();
+
+    astronautas.push_back(Astronauta("111", "Ana Maria", 30, true, false));
+    astronautas.push_back(Astronauta("222", "Bruno Costa", 35, true, true));
+    astronautas.push_back(Astronauta("333", "Carla Souza", 28, false, false));
+    astronautas.push_back(Astronauta("444", "Diego Lima", 41, false, false));
+
+    Voo voo10(10, "finalizado com sucesso");
+    voo10.adicionarAstronauta("111");
+    voo10.adicionarAstronauta("222");
+    voos.push_back(voo10);
+
+    Voo voo20(20, "finalizado com explosao");
+    voo20.adicionarAstronauta("333");
+    voo20.adicionarAstronauta("444");
+    voos.push_back(voo20);
+
+    voos.push_back(Voo(30));
+
+    Voo voo40(40, "finalizado com sucesso");
+    voo40.adicionarAstronauta("444");
+    voos.push_back(voo40);
+
+    Voo voo50(50, "em curso");
+    voo50.adicionarAstronauta("111");
+    voos.push_back(voo50);
+
+    cout << "OK: cenario de demonstracao criado" << endl;
+}
 };
     
 
@@ -936,7 +968,9 @@ int main() {
     cin >> nomeArquivo;
     agencia.carregarDados(nomeArquivo);
         } else if (comando == "RELATORIO") {
-    agencia.relatorio();
+            agencia.relatorio();
+        } else if (comando == "DEMO") {
+            agencia.demo();
         } else {
             cout << "ERRO: comando desconhecido " << comando << endl;
         }
