@@ -51,16 +51,15 @@ com a IA. Cole só os pedidos que você enviou.
 
 ## Missão 4: livre
 
-- O que escolhi e por quê:
-- O comando novo, a saída que eu esperava e o nome do meu arquivo de comandos
-  (escritos antes de pedir):
-- Primeira mensagem:
-- O que veio, comparado com o que eu esperava:
-- `testar.sh parte1` continuou passando?
-- Aceitei, ajustei ou descartei? Por quê:
+- O que escolhi e por quê: escolhi criar o comando DEMO, porque ele permite criar automaticamente um cenário de exemplo com astronautas e voos, facilitando a demonstração do programa sem precisar cadastrar todos os dados manualmente.
+- O comando novo, a saída que eu esperava e o nome do meu arquivo de comandos (escritos antes de pedir): o comando novo será DEMO. Espero que ele crie o cenário de demonstração e mostre a mensagem OK: cenario de demonstracao criado. O arquivo de comandos é testes/missao4_demo.in, contendo os comandos DEMO, LISTAR_ASTRONAUTAS, LISTAR_VOOS e RELATORIO.
+- Primeira mensagem: pedi ao OpenCode para implementar o comando DEMO, apresentando primeiro um plano sem editar os arquivos. O plano foi criar o método demo() na classe Agencia e adicionar o comando DEMO no main(). Também escolhi que o DEMO limparia os dados existentes antes de criar o cenário e que os objetos seriam adicionados diretamente aos vetores.
+- O que veio, comparado com o que eu esperava: a implementação funcionou, mas houve uma diferença no resultado do astronauta mais experiente. Eu esperava que fosse o astronauta 444 Diego Lima, mas o resultado foi 111 Ana Maria. Isso aconteceu porque o voo em curso também conta como voo lançado. Assim, Ana e Diego ficaram com a mesma quantidade de voos lançados, e o primeiro astronauta cadastrado foi escolhido no empate.
+- `testar.sh parte1` continuou passando? Sim. Os testes da Parte 1 continuaram passando, com 6 de 6 testes. A Missão 1 passou com 2 de 2, a Missão 2 com 3 de 3 e a Missão 3 com 5 de 5.
+- Aceitei, ajustei ou descartei? Por quê: aceitei a implementação porque ela funcionou conforme as regras do programa e os testes continuaram passando. A diferença no astronauta mais experiente foi mantida porque está de acordo com a regra de contar voos em curso como voos lançados e, em caso de empate, escolher o primeiro astronauta cadastrado.
 
 ## Fechamento
 
-- O que a IA fez que eu não conseguiria fazer sozinho nesse prazo:
-- Onde ela errou ou fez algo que eu não pedi:
-- O que eu faria diferente da próxima vez:
+- O que a IA fez que eu não conseguiria fazer sozinho nesse prazo:a IA me ajudou a desenvolver as Missões 1, 2, 3 e 4. Eu ainda estou aprendendo programação e não conseguiria escrever sozinho, dentro desse prazo, um código com tantos detalhes e funcionalidades. A IA também me ajudou a entender os erros encontrados nos testes e a corrigi-los.
+- Onde ela errou ou fez algo que eu não pedi: na Missão 2, a primeira versão do formato de salvamento não funcionou corretamente com o carregamento, então foi necessário corrigir. Na Missão 4, o resultado do astronauta mais experiente foi diferente do que eu esperava inicialmente, mas depois verificamos que estava de acordo com as regras do programa.
+- O que eu faria diferente da próxima vez: eu começaria a atividade com mais antecedência, para ter mais tempo para estudar o código, testar as funcionalidades e tirar minhas dúvidas com calma, sem precisar fazer tudo próximo do prazo de entrega.
