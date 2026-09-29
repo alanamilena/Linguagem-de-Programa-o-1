@@ -60,6 +60,6 @@ com a IA. Cole só os pedidos que você enviou.
 
 ## Fechamento
 
-- O que a IA fez que eu não conseguiria fazer sozinho nesse prazo:a IA me ajudou a desenvolver as Missões 1, 2, 3 e 4. Eu ainda estou aprendendo programação e não conseguiria escrever sozinho, dentro desse prazo, um código com tantos detalhes e funcionalidades. A IA também me ajudou a entender os erros encontrados nos testes e a corrigi-los.
+- O que a IA fez que eu não conseguiria fazer sozinho nesse prazo:a IA me ajudou a desenvolver as Missões 1, 2, 3 e 4. Eu ainda estou aprendendo programação e não conseguiria escrever sozinha, dentro desse prazo, um código com tantos detalhes e funcionalidades. A IA também me ajudou a entender os erros encontrados nos testes e a corrigi-los.
 - Onde ela errou ou fez algo que eu não pedi: na Missão 2, a primeira versão do formato de salvamento não funcionou corretamente com o carregamento, então foi necessário corrigir. Na Missão 4, o resultado do astronauta mais experiente foi diferente do que eu esperava inicialmente, mas depois verificamos que estava de acordo com as regras do programa.
 - O que eu faria diferente da próxima vez: eu começaria a atividade com mais antecedência, para ter mais tempo para estudar o código, testar as funcionalidades e tirar minhas dúvidas com calma, sem precisar fazer tudo próximo do prazo de entrega.
